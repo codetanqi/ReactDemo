@@ -3,6 +3,7 @@ import Index from "../pages/admin/dashboard/Index";
 import Login from "../pages/Login";
 import Edit from '../pages/admin/products/Edit';
 import PageNotFound from '../pages/admin/PageNotFound';
+import 'antd/dist/antd.css'
 
 export const mainRoutes = [
     {
@@ -20,7 +21,7 @@ export const adminRoutes = [{
     component: Index
 },
 {
-    path: '/admin/products:id/edit',
+    path: '/admin/products/edit/:id',
     component: Edit
 }, {
     path: '/admin/products',

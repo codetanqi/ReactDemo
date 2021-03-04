@@ -1,12 +1,11 @@
-import { Button } from 'antd';
-import 'antd/dist/antd.css'
-import './App.css';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { adminRoutes } from './routes'
+import { adminRoutes } from './routes';
+import Frame from './components/Frame/Frame';
+import React from 'react';
+
 function App() {
   return (
-    <div className="App">
-      <h1>这是App组件</h1>
+    <Frame >
       <Switch>
         {adminRoutes.map(route => {
           return <Route key={route.path} path={route.path} exact={route.exact} render={routeProps => {
@@ -15,7 +14,8 @@ function App() {
         })}
         <Redirect to='/404' />
       </Switch>
-    </div>
+    </Frame>
+
   );
 }
 
