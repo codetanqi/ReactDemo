@@ -21,7 +21,7 @@ const dataSource = [
         price: 99
     }
 ];
-function List() {
+function List(props) {
     const column = [
         {
             title: '序号',
@@ -57,7 +57,8 @@ function List() {
 
 
     return (
-        <Card title="商品列表" extra={<Button type="primary" size="small">新增</Button>}>
+        <Card title="商品列表"
+            extra={<Button type="primary" size="small" onClick={() => props.history.push('/admin/products/edit')}>新增</Button>}>
             <Table columns={column} bordered dataSource={dataSource} ></Table>
         </Card>
     )

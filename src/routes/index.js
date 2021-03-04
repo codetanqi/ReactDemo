@@ -24,7 +24,7 @@ export const adminRoutes = [{
     icon: 'AreaChartOutlined'
 },
 {
-    path: '/admin/products/edit/:id',
+    path: '/admin/products/edit/:id?',
     isShow: false,
     component: Edit
 }, {
